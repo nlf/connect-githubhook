@@ -1,0 +1,14 @@
+{
+    "name": "connect-githubhook",
+    "description": "a simple github post-receive hook implemented as connect middleware",
+    "author": "Nathan LaFreniere",
+    "version": "0.1.0",
+    "main": "./index.js",
+    "repository": "git://github.com/nathan-lafreniere/connect-githubhook.git",
+    "devDependencies": {
+        "express": "2.5.9"
+    },
+    "scripts": {
+        "test": "node test"
+    }
+}
