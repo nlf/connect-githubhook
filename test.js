@@ -2,7 +2,7 @@ var express = require('express'),
     http = require('http'),
     app = express.createServer(),
     cgh = require('./index'),
-    sites = { '/testPath': 'https://github.com/nathan-lafreniere/connect-githubhook' };
+    sites = { '/testPath': 'https://github.com/nlf/connect-githubhook' };
 
 var handler = function (repo, payload) {
     console.log('received push for:', repo);
@@ -15,11 +15,11 @@ app.listen(8123);
 
 var testData = {
     payload: {
-        pusher: { name: 'nathan-lafreniere', email: 'nlf@andyet.net' },
+        pusher: { name: 'nlf', email: 'nlf@andyet.net' },
         repository: {
             name: 'connect-githubhook',
-            url: 'https://github.com/nathan-lafreniere/connect-githubhook',
-            owner: { name: 'nathan-lafreniere', email: 'nlf@andyet.net' }
+            url: 'https://github.com/nlf/connect-githubhook',
+            owner: { name: 'nlf', email: 'nlf@andyet.net' }
         },
         ref: 'refs/heads/master'
     }
