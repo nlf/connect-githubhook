@@ -2,7 +2,9 @@ var express = require('express'),
     http = require('http'),
     app = express.createServer(),
     cgh = require('./index'),
-    sites = { '/testPath': 'https://github.com/nlf/connect-githubhook' };
+    sites = {'/testPath': {url: 'https://github.com/nlf/connect-githubhook',
+                           branch: 'master'}
+            };
 
 var handler = function (repo, payload) {
     console.log('received push for:', repo);
