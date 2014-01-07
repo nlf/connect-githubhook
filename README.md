@@ -6,7 +6,8 @@ This is a simple github post-receive hook implemented as connect middleware for 
 ```javascript
 var express = require('express'),
     cgh = require('connect-githubhook'),
-    sites = { '/supersecretpath': 'https://github.com/yourname/yourrepo' },
+    sites = { '/supersecretpath': {url: 'https://github.com/yourname/yourrepo',
+                                   branch: 'master'},
     app = express.createServer();
 
 var handler = function (repo, payload) {
